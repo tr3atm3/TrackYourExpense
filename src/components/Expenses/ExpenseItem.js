@@ -18,17 +18,19 @@ const ExpenseItem = (props) => {
     e.target.parentElement.style.display = "none";
   };
   return (
-    <Card className="expense-item">
-      <ExpenseDate date={props.date} />
-      <ExpenseDetails
-        amount={amount}
-        locationOfExpenditure={props.locationOfExpenditure}
-        title={title}
-      />
-      <button onClick={clickHandler}>Change Title</button>
-      <button onClick={deleteHandler}>Delete Expense</button>
-      <button onClick={changeHandler}>Change Amount</button>
-    </Card>
+    <li>
+      <Card className="expense-item">
+        <ExpenseDate date={props.date} />
+        <ExpenseDetails
+          amount={amount}
+          locationOfExpenditure={props.locationOfExpenditure}
+          title={title}
+        />
+        <button onClick={clickHandler}>Change Title</button>
+        <button onClick={deleteHandler}>Delete Expense</button>
+        <button onClick={changeHandler}>Change Amount</button>
+      </Card>
+    </li>
   );
 };
 
